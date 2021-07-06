@@ -39,10 +39,19 @@ html.addEventListener('dblclick', function () {
 })
 
 // 7. Keydown
-function escKey(event) {
-    if (event.keyCode === 27) {
-        image.style.height = "100vh"
+function leftArrow(event) {
+    if (event.keyCode === 37) {
+        image.style.height = "50vh"
     }
 }
 
-document.addEventListener('keydown', escKey)
+document.addEventListener('keydown', leftArrow)
+
+// 7. Keyup
+function rightArrow(event) {
+    if (event.keyCode === 39) {
+        image.style.height = "auto"
+    }
+}
+
+document.addEventListener('keyup', rightArrow)
