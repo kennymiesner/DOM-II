@@ -24,9 +24,16 @@ footer.addEventListener('mouseleave', function () {
     footer.style.backgroundColor = "#FFEBCD"
 })
 
-// 5. Onclick / Remove
+// 5. Onclick
 let image = document.querySelector('.intro img')
 
 image.addEventListener('click', function () {
     image.remove();
+})
+
+// 6. Dblclick
+let html = document.querySelector('html')
+
+html.addEventListener('dblclick', function () {
+    html.style.backgroundColor = "red"
 })
