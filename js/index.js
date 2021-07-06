@@ -55,3 +55,20 @@ function rightArrow(event) {
 }
 
 document.addEventListener('keyup', rightArrow)
+
+// 8. Wheel
+function zoom(event) {
+    event.preventDefault();
+
+    scale += event.deltaY * -0.01;
+
+    // Restrict scale
+    scale = Math.min(Math.max(.125, scale), 4);
+
+    // Apply scale transform
+    el.style.transform = `scale(${scale})`;
+}
+
+let scale = 1;
+const el = document.querySelector('.content-destination img');
+el.onwheel = zoom;
